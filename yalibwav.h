@@ -15,7 +15,7 @@ struct wavFmt {
     char *etc;
 };
 
-struct wav {
+typedef struct wav {
     char fileId[4];
     unsigned int fileSize;
     char format[4];
@@ -25,9 +25,7 @@ struct wav {
     short *audio;
     unsigned int etcChunksCount;
     struct chunk *etcChunks;
-};
-
-typedef struct wav WAV;
+} WAV;
 
 unsigned short wavFileRead(FILE *file, WAV *wav);
 unsigned short wavFileWrite(FILE *file, WAV wav);
