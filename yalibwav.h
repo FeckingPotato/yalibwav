@@ -15,7 +15,7 @@ struct wavFmt {
     char *etc;
 };
 
-typedef struct wav {
+typedef struct {
     char fileId[4];
     unsigned int fileSize;
     char format[4];
